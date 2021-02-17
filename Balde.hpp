@@ -6,14 +6,14 @@ using namespace std;
 class Balde{
 private:
     std::vector<string> _balde; //vetor de strings representando o balde
-    size_t tamanho; //numero maximo de pseudoChaves dentro do Balde
+    size_t tamanho; //Quantidade maxima de pseudo chaves dentro do balde
     size_t pLocal; // Profundidade Local
 public:
     Balde(size_t tamanho){
-        this->tamanho = tamanho;
-        this->pLocal = 1;
+        this->tamanho = tamanho; 
+        this->pLocal = 1; 
     }
- ///////////////////////////////
+ /////////////////////////////// 
     size_t getPLocal(){
         return this->pLocal;
     }
@@ -34,7 +34,7 @@ public:
     }
 ////////////////////////////////
     void inserirPseudoChave(string pseudoChave){
-        if(!this->buscarPseudoChave(pseudoChave)){
+        if(!this->buscarPseudoChave(pseudoChave)){ // Se o balde ja possuir essa pseudo chave, ele cancela a inserção
             this->_balde.push_back(pseudoChave);
         }
         else
